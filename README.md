@@ -1,18 +1,22 @@
 # LagLens
 
-**Диагностика производительности Minecraft-сервера человеческим языком - В основе для владельцев серверов **
+[![Build](https://github.com/MrBuggI/LagLens/actions/workflows/build.yml/badge.svg)](https://github.com/MrBuggI/LagLens/actions/workflows/build.yml)
+[![Release](https://img.shields.io/github/v/release/MrBuggI/LagLens)](https://github.com/MrBuggI/LagLens/releases/latest)
+![Paper](https://img.shields.io/badge/Paper-1.21.x-444444)
+![Java](https://img.shields.io/badge/Java-21-E76F00)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+**Диагностика производительности Minecraft-сервера человеческим языком. Сделано для владельцев серверов.**
 
 Spark отлично профилирует, но выдаёт дерево вызовов методов, в котором владелец сервера ничего не понимает. LagLens показывает то же самое простыми словами: **где именно лагает и что с этим делать**.
 
+> **English:** a Paper 1.21 plugin that explains server lag in plain language. `/lagreport` finds overloaded chunks (tile entities, hoppers), worlds with too many entities or dropped items, and reports TPS/MSPT with a concrete fix for each problem. The chunk scan is spread across ticks, so the diagnostic tool never causes the lag spike it is looking for.
+
 ---
 
-## Демо
+## Пример отчёта
 
-<!-- Сюда вставить гифку или скриншот вывода команды /lagreport -->
-
-![Пример вывода /lagreport](docs/demo.gif)
-
-Пример отчёта:
+Вывод команды `/lagreport`:
 
 ```
 LagLens
