@@ -1,7 +1,7 @@
-package io.github.buggy.laglens.metrics;
+package io.github.mrbuggi.laglens.metrics;
 
-import io.github.buggy.laglens.model.ServerMetrics;
-import io.github.buggy.laglens.model.WorldStats;
+import io.github.mrbuggi.laglens.model.ServerMetrics;
+import io.github.mrbuggi.laglens.model.WorldStats;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;

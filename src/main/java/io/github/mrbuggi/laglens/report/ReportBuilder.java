@@ -1,9 +1,9 @@
-package io.github.buggy.laglens.report;
+package io.github.mrbuggi.laglens.report;
 
-import io.github.buggy.laglens.config.LagLensConfig;
-import io.github.buggy.laglens.model.Problem;
-import io.github.buggy.laglens.model.ServerMetrics;
-import io.github.buggy.laglens.model.ServerSnapshot;
+import io.github.mrbuggi.laglens.config.LagLensConfig;
+import io.github.mrbuggi.laglens.model.Problem;
+import io.github.mrbuggi.laglens.model.ServerMetrics;
+import io.github.mrbuggi.laglens.model.ServerSnapshot;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,7 +2,7 @@ plugins {
     java
 }
 
-group = "io.github.buggy"
+group = "io.github.mrbuggi"
 version = property("pluginVersion") as String
 
 repositories {

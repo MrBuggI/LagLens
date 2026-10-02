@@ -1,4 +1,4 @@
-package io.github.buggy.laglens.model;
+package io.github.mrbuggi.laglens.model;
 
 /**
  * Одна найденная проблема с готовой текстовой рекомендацией.

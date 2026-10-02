@@ -1,11 +1,11 @@
-package io.github.buggy.laglens.command;
+package io.github.mrbuggi.laglens.command;
 
-import io.github.buggy.laglens.LagLensPlugin;
-import io.github.buggy.laglens.metrics.MetricsCollector;
-import io.github.buggy.laglens.model.ServerMetrics;
-import io.github.buggy.laglens.model.ServerSnapshot;
-import io.github.buggy.laglens.report.ReportBuilder;
-import io.github.buggy.laglens.scan.ChunkScanner;
+import io.github.mrbuggi.laglens.LagLensPlugin;
+import io.github.mrbuggi.laglens.metrics.MetricsCollector;
+import io.github.mrbuggi.laglens.model.ServerMetrics;
+import io.github.mrbuggi.laglens.model.ServerSnapshot;
+import io.github.mrbuggi.laglens.report.ReportBuilder;
+import io.github.mrbuggi.laglens.scan.ChunkScanner;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

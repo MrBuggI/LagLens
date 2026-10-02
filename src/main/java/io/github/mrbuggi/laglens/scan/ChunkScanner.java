@@ -1,9 +1,9 @@
-package io.github.buggy.laglens.scan;
+package io.github.mrbuggi.laglens.scan;
 
-import io.github.buggy.laglens.LagLensPlugin;
-import io.github.buggy.laglens.config.LagLensConfig;
-import io.github.buggy.laglens.model.ChunkHotspot;
-import io.github.buggy.laglens.model.ScanResult;
+import io.github.mrbuggi.laglens.LagLensPlugin;
+import io.github.mrbuggi.laglens.config.LagLensConfig;
+import io.github.mrbuggi.laglens.model.ChunkHotspot;
+import io.github.mrbuggi.laglens.model.ScanResult;
 import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.World;

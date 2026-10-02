@@ -1,10 +1,10 @@
-package io.github.buggy.laglens.model;
+package io.github.mrbuggi.laglens.model;
 
 import java.util.List;
 
 /**
  * Дешёвая часть отчёта: TPS, MSPT и статистика по мирам.
- * Собирается синхронно за один тик (см. {@link io.github.buggy.laglens.metrics.MetricsCollector}).
+ * Собирается синхронно за один тик (см. {@link io.github.mrbuggi.laglens.metrics.MetricsCollector}).
  * Топ «горячих» чанков добавляется отдельно на этапе скана.
  *
  * @param tps1m 1-минутный TPS

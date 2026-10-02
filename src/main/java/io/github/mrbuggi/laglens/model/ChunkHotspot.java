@@ -1,4 +1,4 @@
-package io.github.buggy.laglens.model;
+package io.github.mrbuggi.laglens.model;
 
 /**
  * «Горячий» чанк - кандидат в источники лагов.

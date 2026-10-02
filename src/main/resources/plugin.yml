@@ -1,9 +1,9 @@
 name: LagLens
 version: '${version}'            # подставляется из build.gradle.kts на сборке
-main: io.github.buggy.laglens.LagLensPlugin
+main: io.github.mrbuggi.laglens.LagLensPlugin
 api-version: '1.21'             # заявляем совместимость с 1.21.x
 description: Диагностика производительности сервера человеческим языком.
-author: buggy
+author: MrBuggI
 
 commands:
   lagreport:

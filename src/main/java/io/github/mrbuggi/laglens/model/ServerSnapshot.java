@@ -1,4 +1,4 @@
-package io.github.buggy.laglens.model;
+package io.github.mrbuggi.laglens.model;
 
 /**
  * Полный снимок состояния сервера: дешёвые метрики плюс результат скана чанков.

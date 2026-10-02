@@ -1,6 +1,6 @@
-package io.github.buggy.laglens.config;
+package io.github.mrbuggi.laglens.config;
 
-import io.github.buggy.laglens.LagLensPlugin;
+import io.github.mrbuggi.laglens.LagLensPlugin;
 import org.bukkit.configuration.file.FileConfiguration;
 
 /**

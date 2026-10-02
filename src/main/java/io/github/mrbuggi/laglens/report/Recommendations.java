@@ -1,10 +1,10 @@
-package io.github.buggy.laglens.report;
+package io.github.mrbuggi.laglens.report;
 
-import io.github.buggy.laglens.config.LagLensConfig;
-import io.github.buggy.laglens.model.ChunkHotspot;
-import io.github.buggy.laglens.model.Problem;
-import io.github.buggy.laglens.model.ServerSnapshot;
-import io.github.buggy.laglens.model.WorldStats;
+import io.github.mrbuggi.laglens.config.LagLensConfig;
+import io.github.mrbuggi.laglens.model.ChunkHotspot;
+import io.github.mrbuggi.laglens.model.Problem;
+import io.github.mrbuggi.laglens.model.ServerSnapshot;
+import io.github.mrbuggi.laglens.model.WorldStats;
 
 import java.util.ArrayList;
 import java.util.Comparator;
