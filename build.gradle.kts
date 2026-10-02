@@ -16,6 +16,13 @@ dependencies {
     // Если написать implementation — соберётся, но API попытается попасть внутрь JAR,
     // а на некоторых конфигурациях это приводит к конфликтам классов.
     compileOnly("io.papermc.paper:paper-api:${property("paperApiVersion")}")
+
+    // Тесты хранилища истории идут без сервера: нужен только JUnit и драйвер SQLite.
+    // В рантайме драйвер даёт сам сервер, поэтому в JAR плагина он не попадает.
+    testImplementation(platform("org.junit:junit-bom:5.11.4"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testRuntimeOnly("org.xerial:sqlite-jdbc:3.47.1.0")
 }
 
 java {
@@ -29,6 +36,14 @@ tasks {
     compileJava {
         // Комментарии и строки отчёта на русском — без UTF-8 в консоли будут «кракозябры».
         options.encoding = "UTF-8"
+    }
+
+    compileTestJava {
+        options.encoding = "UTF-8"
+    }
+
+    test {
+        useJUnitPlatform()
     }
 
     processResources {

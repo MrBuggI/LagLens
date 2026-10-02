@@ -7,8 +7,8 @@ author: MrBuggI
 
 commands:
   lagreport:
-    description: Снимок состояния сервера с отчётом о проблемах производительности.
-    usage: /lagreport
+    description: Отчёт о проблемах производительности; history - последние сохранённые отчёты.
+    usage: /lagreport [history [число]]
     permission: laglens.use
 
 permissions:

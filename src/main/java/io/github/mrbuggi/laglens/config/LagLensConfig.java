@@ -21,6 +21,9 @@ public final class LagLensConfig {
     private final double msptWarning;
     private final int topChunks;
     private final int topEntityClusters;
+    private final boolean historyEnabled;
+    private final int historyKeep;
+    private final int historyShown;
 
     private LagLensConfig(int chunksPerTick,
                           int chunkTileEntitiesThreshold,
@@ -30,7 +33,10 @@ public final class LagLensConfig {
                           double tpsWarning,
                           double msptWarning,
                           int topChunks,
-                          int topEntityClusters) {
+                          int topEntityClusters,
+                          boolean historyEnabled,
+                          int historyKeep,
+                          int historyShown) {
         this.chunksPerTick = chunksPerTick;
         this.chunkTileEntitiesThreshold = chunkTileEntitiesThreshold;
         this.chunkHoppersThreshold = chunkHoppersThreshold;
@@ -40,6 +46,9 @@ public final class LagLensConfig {
         this.msptWarning = msptWarning;
         this.topChunks = topChunks;
         this.topEntityClusters = topEntityClusters;
+        this.historyEnabled = historyEnabled;
+        this.historyKeep = historyKeep;
+        this.historyShown = historyShown;
     }
 
     /**
@@ -49,6 +58,7 @@ public final class LagLensConfig {
      */
     public static LagLensConfig load(LagLensPlugin plugin) {
         FileConfiguration config = plugin.getConfig();
+        int historyKeep = Math.max(1, config.getInt("history.keep", 200));
 
         return new LagLensConfig(
                 Math.max(1, config.getInt("scan.chunks-per-tick", 200)),
@@ -59,8 +69,26 @@ public final class LagLensConfig {
                 config.getDouble("thresholds.tps-warning", 18.0),
                 config.getDouble("thresholds.mspt-warning", 45.0),
                 Math.max(1, config.getInt("report.top-chunks", 5)),
-                Math.max(1, config.getInt("report.top-entity-clusters", 3))
+                Math.max(1, config.getInt("report.top-entity-clusters", 3)),
+                config.getBoolean("history.enabled", true),
+                historyKeep,
+                // Показать больше, чем хранится, нельзя.
+                Math.clamp(config.getInt("history.shown", 5), 1, historyKeep)
         );
+    }
+
+    public boolean isHistoryEnabled() {
+        return historyEnabled;
+    }
+
+    /** Сколько последних отчётов хранить в базе. */
+    public int getHistoryKeep() {
+        return historyKeep;
+    }
+
+    /** Сколько отчётов показывать по {@code /lagreport history} без числа. */
+    public int getHistoryShown() {
+        return historyShown;
     }
 
     public int getChunksPerTick() {
